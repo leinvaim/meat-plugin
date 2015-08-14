@@ -1,0 +1,17 @@
+
+@font-face {
+    font-family: Brush Script Std;
+    src: url('fonts/BRUSHSCRIPTSTD.OTF');
+}
+ 
+maintext{
+    font-family: Brush Script Std;
+    font-size: 20pt;
+}
+
+test{font-family:Calibri;
+font-size: 60pt;
+}
+
+p{font-family: Calibri;
+}

@@ -1,0 +1,91 @@
+/*
+Plugin Name: Checkout Field Manager for WooCommerce
+*/
+Changelog
+1.0.22 
+	* remove post code requirement on countries that don't use it
+
+= 1.0.21 = 4/12/2013
+	* Update to fix Zip Code label bug
+	* Added plugin update notifier
+	
+= 1.0.20 = 03/20/2013
+	* js to check if cofm tables are visible in admin - to avoid plugin conflict seen on rare occassion
+	* Update to support the Residential Address indicator field from the SOD Fedex Extension
+	
+= 1.0.19 = 03/18/2013
+	* Fix a bug introduced in WC 2.0.3 relating to a conflict of defined "default" value for custom fields and new "default" (value) field in core
+	* Fix a bug with css classes erroring on shipping fields
+	* removed .chosen selection from frontend js
+	
+= 1.0.18 = 03/06/2013 
+	Added WC 2.0 classes to form field
+= 1.0.17 = 03/01/2013
+	* Fixed a bug that wouldn't record a checkbox in 'Additional' settings to save
+	* Added a checkbox under 'Settings' that allows shop owners to retain added fields when the extension is deactivated (useful if updating - to not have to re-add all fields)
+	
+= 1.0.16 = 11/25/2012
+	* Cleaned up a few admin and frontend notices and warnings
+	
+= 1.0.15 = 11/09/2012
+	* Fixed: 
+		- State still being required for countries that don't have 'state' as part of their address
+		- Some headings and text needed text_domain
+	* Added:
+		- Additional Fields section - populates after shipping section (includes default Notes field)
+		- Modified templates to include Additional section
+		- Datepicker options on admin side (date format, mindate, maxdate, disallow days)
+		- Modified js to include code for new datepicker settings
+		- Added Heading field type
+		- Added filters around Billing Details, Shipping Details section headings in e-mails
+	* removed: float:left from p.form-row in frontend css
+		
+= 1.0.14 = 09/28/2012
+	* Fixed shipping address not populating when 'Collect shipping address even when not required' is checked in shipping settings.
+
+= 1.0.13 = 09/06/2012
+	* Update to fix full-width not working correctly.
+
+= 1.0.12 = 08/31/2012
+	* Update classes to prevent css conflicts in some themes.
+
+= 1.0.11 = 08/17/2012
+	* Removed php notices when "shiptobilling" is checked and default shipping fields don't match billing fields
+
+= 1.0.10 = 08/15/2012
+	* Added jQuery validation to ensure the newly added fields have a 'name' entered.
+
+= 1.0.9 = 08/08/2012
+	* Added "Additional Fields" to the order confirmation page.
+
+= 1.0.8 =
+	* Bug fix - "full row" setting not saving on initial ajax row add 
+
+= 1.0.7 =
+	* Added localization
+	* Minor bug fixes
+
+= 1.0.6 =
+	* Readded missing account view hook 
+ 
+= 1.0.5 =
+	* Only enqueue scripts on checkout to avoid javascript collision with other plugins
+
+= 1.0.4 =
+	* Added Radio button functionality
+* Fixed jQuery Chosen bug
+
+= 1.0.3 =
+	* Added ability to add Select elements to the checkout fields
+	* Cleaned up a few minor bugs
+	* Renamed .js files
+	* Added FAQ tab with a few general questions
+
+= 1.0.2 = 
+	Cleanup - notices
+
+= 1.0.1 =
+	* Fix - required asterick on date fields
+
+= 1.0 =
+	* Initial release

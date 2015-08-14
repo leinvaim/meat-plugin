@@ -1,0 +1,226 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Keywords</title>
+</head>
+
+<body>
+
+
+<div id="main">
+
+<div style="border:1px solid #000000;padding:10px;">
+
+<form method="get" action="http://www.xav.com/search.pl">
+
+<table border="0" cellpadding="4" cellspacing="0">
+<tr>
+	<td align="right"><font face="Calibri" size="4"><b>Keywords:</b></font></td>
+	<td><font size="4" face="Calibri"><input size="40" name="q" /> <input type="submit" value="Search" /></font></td>
+</tr>
+<tr>
+	<td align="right"><font face="Calibri" size="4"><b>Matching:</b></font></td>
+	<td><font size="4" face="Calibri"><select name="Match">
+		<option value="0">Match any term</option>
+		<option value="1">Match all terms</option>
+		<option value="2">Match as a phrase</option>
+	</select></font></td>
+</tr>
+<tr>
+	<td align="right" valign="top"><font face="Calibri" size="4"><b>Search Index:</b></font></td>
+	<td>
+
+		<font face="Calibri"><font size="4">
+
+		<script type="text/javascript">
+		<!--
+		function SetIncludeByName() {
+			if ((document) && (document.all) && (document.all("Realm2"))) {
+				document.all("Realm2").checked = true;
+				}
+			}
+		//-->
+		</script>
+
+		<input type="radio" name="Realm" id="Realm1" value="All" checked="checked" /></font><label for="Realm1"><font size="4"> Search <b>All</b> sections of this site</font></label><font size="4"><br />
+		<input type="radio" name="Realm" id="Realm2" value="include-by-name" /></font><label for="Realm2"><font size="4"> Search only these sections:</font></label><font size="4">
+		</font></font>
+		<div style="margin-left:50px">
+			<font face="Calibri"><font size="4">
+			<input type="checkbox" value="1" onclick="SetIncludeByName();" id="R1" name="Realm:Beef" /></font><label for="R1"><font size="4">Beef</font></label><font size="4"><br />
+			<input type="checkbox" value="1" onclick="SetIncludeByName();" id="R2" name="Realm:Lamb" /></font><label for="R2"><font size="4">Lamb</font></label><font size="4"><br />
+			<input type="checkbox" value="1" onclick="SetIncludeByName();" id="R3" name="Realm:Pork" /></font><label for="R3"><font size="4">Pork</font></label><font size="4"><br />
+			<input type="checkbox" value="1" onclick="SetIncludeByName();" id="R5" name="Realm:Poultry" /></font><label for="R5"><font size="4">Poultry</font></label><font size="4">
+			</font></font>
+		</div>
+
+	</td>
+</tr>
+<tr>
+	<td align="right"><font face="Calibri" size="4"><b>Results per Page:</b></font></td>
+	<td><font size="4" face="Calibri"><select name="maxhits">
+		<option value="10">10 results
+		<option value="25">25 results
+		<option value="100">100 results
+		<option value="99999999">all on one page
+	</select></font></td>
+</tr>
+<tr>
+	<td align="right" valign="top"><font face="Calibri" size="4"><b>Sorting:</b></font></td>
+	<td>
+
+		<p>
+			<font face="Calibri"><font size="4">
+			<input id="sm1" type="radio" name="sort-method" value="1" checked="checked" /></font><label for="sm1"><font size="4"> by relevance</font></label><font size="4"><br />
+			<input id="sm2" type="radio" name="sort-method" value="2" /></font><label for="sm2"><font size="4"> by relevance, reversed</font></label><font size="4">
+			</font></font>
+			<div style="margin-left:50px">
+					<font size="4" face="Calibri">
+					<input type="hidden" name="p:ts_udav" value="0" />
+					</font><font size="4" face="Calibri">
+					<input type="checkbox" name="p:ts" value="1" checked="checked" id="pts1" />
+					<label for="pts1">Give extra relevance to recently-modified documents</label>
+					[<a href="http://www.xav.com/scripts/search/help/1131.html" target="_blank">more info</a>]
+					</font>
+			</div>
+		</p>
+
+		<p>
+			<font face="Calibri"><font size="4">
+			<input id="sm3" type="radio" name="sort-method" value="3" /></font><label for="sm3"><font size="4"> by last modified time</font></label><font size="4">
+			[<a href="http://www.xav.com/scripts/search/help/1068.html" target="_blank">limitations</a>]<br />
+			<input id="sm4" type="radio" name="sort-method" value="4" /></font><label for="sm4"><font size="4"> by last modified time, reversed</font></label><font size="4">
+			</font></font>
+		</p>
+
+		<p>
+			<font face="Calibri"><font size="4">
+			<input id="sm5" type="radio" name="sort-method" value="5" /></font><label for="sm5"><font size="4"> by last index time</font></label><font size="4"><br />
+			<input id="sm6" type="radio" name="sort-method" value="6" /></font><label for="sm6"><font size="4"> by last index time, reversed</font></label><font size="4">
+			</font></font>
+		</p>
+
+	</td>
+</tr>
+<tr>
+	<td colspan="2">
+
+		<p><font face="Calibri" size="4"><b>String Handling:</b></font></p>
+
+		<blockquote>
+
+			<p>
+				<font size="4" face="Calibri">
+				<input type="hidden" name="p:pm_udav" value="0" />
+				<input type="checkbox" name="p:pm" value="1" checked="checked" id="ppm1" />
+				<label for="ppm1">Match approximate plural forms; "bug" will match "bug" or "bugs"</label>
+				[<a href="http://www.xav.com/scripts/search/help/1116.html" target="_blank">limitations</a>]
+				</font>
+			</p>
+
+			<p>
+				<font size="4" face="Calibri">
+				<input type="radio" name="p:ssm" id="pssm0" value="0" checked="checked" />
+				<label for="pssm0"> Match whole words; "eat" will match "eat"</label><br />
+
+				<input type="radio" name="p:ssm" id="pssm1" value="1" />
+				<label for="pssm1"> Match substrings; "eat" will match "beat" and "neat"</label>
+				</font>
+			</p>
+
+		</blockquote>
+
+	</td>
+</tr>
+</table>
+
+</form>
+
+<p>Alternately, <a href="http://www.xav.com/search.pl?q=thewildcardisaveryspecialcharacter">click here</a> to browse all listings in the search index.</p>
+
+<p><b>Power User Quick Tips</b></p>
+
+<p>Quotes or punctuation bind phrases:</p>
+
+<blockquote>
+
+	<p>"tuna fish pizza"<br />
+	tuna.fish.pizza</p>
+
+</blockquote>
+
+<p>The plus sign makes a term required.  Use this to force certain keywords when searching with "match any term".</p>
+
+<blockquote>
+
+	<p>rocky road +flavor +"ice cream"</p>
+
+</blockquote>
+
+<p>The pipe makes a term optional.  Use this to give extra weight to optional keywords.</p>
+
+<blockquote>
+
+	<p>"i will make you hurt" |lyrics |"johnny cash"</p>
+
+</blockquote>
+
+<p>The minus sign makes a term forbidden.  Pages containing that term will be removed from the result set.</p>
+
+<blockquote>
+
+	<p>fdse help -"full-duplex switched ethernet" -netcard</p>
+
+</blockquote>
+
+<p>Attributes search a part of the page or record:</p>
+
+<blockquote>
+
+	<p>
+		link:http://www.xav.com/scripts/search/<br />
+		title:zoltan<br />
+		text:"zoltan milosevic"<br />
+		host:xav.com<br />
+		domain:www.xav.com<br />
+		url:xav.com/scripts<br />
+		+domain:xav.com -url:xav.com/scripts<br />
+	</p>
+
+</blockquote>
+
+<p>The asterisk matches zero to four non-space characters:</p>
+
+<blockquote>
+
+	<p>col*ring book</p>
+
+</blockquote>
+
+<p>This search engine finds whole words by default; a search for "ncc17" will not match "NCC-1701".  For partial searches, enable substring matching, or use wildcards "ncc*17*".</p>
+
+</div>
+
+<p>The above customized search form makes use of the following:</p>
+
+<ul>
+
+	<li><p><a class="lite" href="1071.html">Advanced Search: Selecting Realms by name</a></p></li>
+
+	<li><p><a class="lite" href="1069.html">Advanced Search: Selecting number of search results per page</a></p></li>
+
+	<li><p><a class="lite" href="1073.html">Sorting search results</a></p></li>
+
+	<li><p><a class="lite" href="1131.html">Sorting Results: Searching time-sensitive documents</a></p></li>
+
+	<li><p><a class="lite" href="1116.html">Advanced Search: Matching approximate plural forms</a></p></li>
+
+	<li><p><a class="lite" href="1172.html">Advanced Search: Matching substrings instead of whole words</a></p></li>
+
+</ul>
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to 
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection. 
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+
+
+	
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.nav {}
+
+	/* .menu is clearfixed inside mixins.scss */
+	.menu {
+		ul {
+			li {
+				a {
+					
+					/*
+					you can use hover styles here even though this size
+					has the possibility of being a mobile device.
+					*/
+					&:hover, &:focus {
+					
+					}
+				}
+				
+				&:first-child {}
+				&:last-child {}
+				
+				/*
+				plan your menus and drop-downs wisely.
+				*/
+				ul.sub-menu,
+				ul.children {
+					li {
+						a {
+							&:hover,
+							&:focus {}
+							&:link {}
+						}
+						&:first-child {}
+						&:last-child {}
+					}
+				}
+			} /* end .menu ul li */
+			
+			/* highlight current page */
+			li.current-menu-item, 
+			li.current_page_item,
+			li.current-page-ancestor {
+				a {}
+			}  /* end current highlighters */
+		} /* end .menu ul */
+	} /* end .menu */
+
+/*********************
+HEADER STYLES
+*********************/
+
+#cart-text {
+	display: none;
+}
+
+#menu-cart {
+	// width: 25%;
+	float: left;
+}
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+/* entry content */
+.entry-content {
+			
+	
+	/* at this larger size, we can start to align images */
+	.alignleft, img.alignleft { 
+		margin-right: 1.5em; 
+		display: inline; 
+		float: left; 
+	}
+	.alignright, img.alignright { 
+		margin-left: 1.5em; 
+		display: inline; 
+		float: right; 
+	}
+	.aligncenter, img.aligncenter { 
+		margin-right: auto; 
+		margin-left: auto; 
+		display: block; 
+		clear: both; 
+	}
+			
+} 
+.home-intro {
+	border-right: 1px dotted #000;
+	padding-right: 20px;
+	margin-bottom: 30px;
+	text-align: left;
+
+	.page-title {
+		border-bottom: none;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+}
+.home-subscribe {
+	text-align: left;
+}
+.home-signup {
+	margin-bottom: 30px;
+	text-align: left;
+}
+/* end .entry-content */
+#gform_fields_1 {
+
+	li {
+		margin-bottom: 20px;
+	}
+
+	input, textarea {
+		width: 50%;
+	}
+}
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+
+	text-align: left;
+}
+
+	.widgettitle {}
+
+	.widget {
+
+		ul {
+
+			li {
+
+				&:first-child {}
+
+				&:last-child {}
+
+				a {}
+
+				/* deep nesting */
+				ul {}
+
+			}
+
+		}
+
+	}
+
+/*********************
+FOOTER STYLES
+*********************/
+	
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+.footer {
+	text-align: center;
+}
+.footer-links {
+	ul {
+		li {}
+	}
+} /* end .footer-links */
+.upper-footer {
+	.quick-links-container {
+		border-bottom: 1px dotted #000;
+		margin-bottom: 20px;
+		padding: 10px 0;
+
+		.twocol {
+			width: 14.364640883%;
+		}
+	}
+}		

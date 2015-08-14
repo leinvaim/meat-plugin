@@ -1,0 +1,28 @@
+/*
+ * JigoShop Checkout Field Manager Admin Css
+ * Copyright Sixty One Designs 2012
+ */
+.right{
+	float:right !important;
+}
+/*Tooltips */
+#checkout-billing-fields a.tips, #checkout-shipping-fields a.tips{
+	float:left;
+	padding-left:15px;
+	margin-top:0;
+}
+#checkout-billing-fields td.narrow input[type="checkbox"]{
+	position: relative;
+	left:25px;
+	top:5px;
+}
+/*Handle Drag */
+#checkout-billing-fields tr td.pointer{
+	background:url(images/handle_drag.png) no-repeat left;
+}
+#checkout-billing-fields tr, #checkout-shipping-fields tr{
+	cursor: move;
+}
+.highlight:hover{
+	cursor: move;
+}

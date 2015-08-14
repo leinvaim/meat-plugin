@@ -1,0 +1,17 @@
+.htaccess
+wp-config.php
+xmlrpc.php
+wp-content/blogs.dir/
+wp-content/backup-db/*
+wp-content/uploads/pb_backupbuddy/*
+wp-content/uploads/backupbuddy/*
+wp-content/uploads/backupbuddy_backups/*
+wp-content/uploads/backupbuddy_temp/*
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/cache/*
+wp-content/cache/supercache/*
+sitemap.xml
+sitemap.xml.gz
+readme.html
+license.txt
