@@ -105,6 +105,10 @@ class BillyCart {
         //$this->assets_dir = trailingslashit( $this->dir ) . 'assets';
         $this->assets_url = esc_url( trailingslashit( plugins_url( '/assets/', $this->file ) ) );
 
+
+
+
+
         //$this->script_suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
         //register_activation_hook( $this->file, array( $this, 'install' ) );
@@ -150,6 +154,7 @@ class BillyCart {
 
 
 
+
         // Custom checkout fields
         add_action( 'woocommerce_after_order_notes', array($this,'wordimpress_custom_checkout_field'), 10 );
         add_filter( 'woocommerce_form_field_multiselect', array($this, 'pickup_time_multiselect_handler'), 10, 4 );
@@ -158,22 +163,96 @@ class BillyCart {
         add_action('woocommerce_cart_totals_after_shipping', array($this, 'woocommerce_cart_totals_after_shipping'));
 
 
+        //added CUSTOM fields
+        add_filter( 'woocommerce_checkout_fields' ,  array($this,'custom_override_checkout_fields'), 100);
+
 
         add_filter( 'wp_footer' ,  array($this,'woo_add_checkout_field_date_range_limit' ));
 
+
+        add_action('wp_head', array($this, 'my_custom_js'));
 
 
     } // End __construct ()
 
 
+    function my_custom_js() {
+
+        global $wpdb;
 
 
+        $results = array();
+        $rows = $wpdb->get_results(
+            $wpdb->prepare(
+                "
+                        SELECT *
+                        FROM mab_postmeta
+                        WHERE meta_key LIKE %s
+                    ",
+                'postcodes_%_suburb'
+            )
+        );
 
+        if( $rows )
+        {
+            $ids = array();
+            foreach( $rows as $row )
+            {
+                $results[] =  $row->post_id;
+            }
+            $results = array_unique($results);
+
+        }
+//        print_r($results) ;
+
+        $bleh = [];
+        $suburbs = [];
+        foreach($results as $postId) {
+            $deliveryZoneFields = get_fields($postId);
+            $bleh[] = $deliveryZoneFields;
+            foreach($deliveryZoneFields['postcodes'] as $postcode) {
+                $suburbs[$postcode['suburb']] = $postcode['suburb'];
+            }
+        }
+        $json = json_encode($bleh, JSON_PRETTY_PRINT);
+
+        echo "<script>var deliveryZones = $json;</script>";
+
+        echo '<script src="/wp-content/plugins/billy-cart/assets/js/super-cart.js"></script>';
+    }
+
+
+    function custom_override_checkout_fields( $fields ) {
+
+
+        //$fields['billing']['billing_city']['label'] = 'Your Label';
+        $fields['billing']['billing_city']['type'] = 'select';
+        $fields['billing']['billing_city']['options'] = array(
+            '' => 'Enter your postcode'
+        );
+        $fields['billing']['billing_city']['clear'] = true;
+        $fields['billing']['billing_city']['class'] = array('form-row-first', 'address_field', 'update_totals_on_change');
+        //$fields['billing']['billing_city']['placeholder'] = _x('Select Suburb', 'placeholder', 'woocommerce');
+
+     //print_r($fields['billing']['billing_city']);
+//      $fields['billing']['suburbs'] = array(
+//        'type'      => 'select',
+//        'label'     => __('Suburb', 'woocommerce'),
+//        'placeholder'   => _x('Select Suburb', 'placeholder', 'woocommerce'),
+//        'required'  => false,
+//        'class'     => array('form-row-first', 'address_field'),
+//        'clear'     => true,
+//        //'position'  => 'right',
+//        'options'   => $suburbs
+//        );
+         return $fields;
+    }
 
     function billy_custom_checkout_field_process(){
 
         // Validate pickup date
         global $woocommerce;
+
 
 
         /*
@@ -197,20 +276,32 @@ class BillyCart {
 
         //if(isset($_REQUEST['pickup_field_update_order_meta'])) return;
         //$_REQUEST['pickup_field_update_order_meta'] = 1;
-       // dispatch_details
+        // dispatch_details
 
 
 
+        //This prints out on order details after checkout
         if ( @$_POST['delivery_date'] ) {
             $str = "Delivery scheduled for ".esc_attr( $_POST['delivery_date'] );
             $_POST['dispatch_details'] = $str;
+            //for the field additional field in admin
             $updated = (update_post_meta( $order_id, '_dispatch_details', $str))?'true':'false'; //checkout field manager adds a _ to the front of the field name...
             hog(print_r(array('billycart', $order_id, "_dispatch_details ($updated): ".$str),true));
         }
 
         if ( @$_POST['pickup_date'] && @$_POST['pickup_time'] ) {
+             //pickup time = morning or arvo,
             $str = "Pickup scheduled for:  ".esc_attr( $_POST['pickup_time'] )." on ".esc_attr( $_POST['pickup_date'] );
             $_POST['dispatch_details'] = $str;
+            $updated = (update_post_meta( $order_id, '_dispatch_details', $str))?'true':'false';
+            hog(print_r(array('billycart', $order_id, "_dispatch_details ($updated): ".$str),true));
+        }
+
+        if(@$_POST['craig']) {
+            update_post_meta($order_id, 'craig', esc_attr($_POST['craig']));
+
+            $str = " Craig hahaha:  ".esc_attr( $_POST['craig'] )." on time";
+            $_POST['dispatch_details'] .= $str;
             $updated = (update_post_meta( $order_id, '_dispatch_details', $str))?'true':'false';
             hog(print_r(array('billycart', $order_id, "_dispatch_details ($updated): ".$str),true));
         }
@@ -262,6 +353,7 @@ class BillyCart {
 
     function wordimpress_custom_checkout_field( $checkout ) {
 
+
         if (isset($_REQUEST['BILLYCART_CHECKOUT_FIELDS_RENDERED']) && $_REQUEST['BILLYCART_CHECKOUT_FIELDS_RENDERED']) return;
 
         global $woocommerce;
@@ -271,7 +363,17 @@ class BillyCart {
 
         // PICKUP TIME
 
+        //Shipping method options / buttons
+
+        echo '<p>';
+        echo '<button type="button" id="pickupButton" name="pickupButton" style="background: #330088; padding: 5em; "> Pick Up</button>';
+        echo '<button type="button" id="deliveryButton" name="deliveryButton" style="background: #330088; padding: 5em;" > Delivery</button>';
+        echo '</p>';
+
+
         echo "\n\n<!-- Zone: ".$this->get_current_billy_zone()." -->\n\n";
+
+
 
         woocommerce_form_field( 'delivery_zone_id', array(
             'type'          => 'text',
@@ -294,43 +396,66 @@ class BillyCart {
         echo '<span class="pickup-time"><h3>Pickup Time</h3>';
 
 
-            woocommerce_form_field( 'pickup_date', array(
-                'type'  => 'text',
-                'id' => 'pickup_date',
-                'class' => array( 'inscription-checkbox form-row-wide' ),
-                'label' => __( 'Pickup date' ),
-            ), $checkout->get_value( 'pickup_date' ) );
+//            woocommerce_form_field( 'pickup_date', array(
+//                'type'  => 'text',
+//                'id' => 'pickup_date',
+//                'class' => array( 'inscription-checkbox form-row-wide' ),
+//                'label' => __( 'Pickup date' ),
+//            ), $checkout->get_value( 'pickup_date' ) );
 
-            woocommerce_form_field( 'pickup_time', array(
-                'type'          => 'select',
-                'class'         => array('my-field-class form-row-wide'),
-                'label'         => __('Pickup time'),
-                'options'       => array(
-                    'Morning' => __('Morning', 'woocommerce' ),
-                    'Afternoon' => __('Afternoon', 'woocommerce' )
-                )
-            ), $checkout->get_value( 'pickup_time' ));
+        echo '<p> Pickup Date: <input type="text" id="pickup_date" name="pickup_date" /> </p>';
+
+//            woocommerce_form_field( 'pickup_time', array(
+//                'type'          => 'select',
+//                'class'         => array('my-field-class form-row-wide'),
+//                'label'         => __('Pickup time'),
+//                'options'       => array(
+//                    'Morning' => __('Morning', 'woocommerce' ),
+//                    'Afternoon' => __('Afternoon', 'woocommerce' )
+//                )
+//            ), $checkout->get_value( 'pickup_time' ));
+
+
+        echo '<p> Pickup Time:
+                <select id="pickup_time" name="pickup_time">
+                    <option value="Morning">Morning</option>
+                    <option value="Afternoon">Afternoon</option>
+                </select>
+
+                </p>';
 
 
         echo '</span>';
 
         // DELIVERY DATE
-        echo '<span class="delivery-date"><h3>Delivery Date sdf asdf asdf</h3>';
+        echo '<span class="delivery-date"><h3>Delivery Date</h3>';
+
+
+//        woocommerce_form_field( 'delivery_date', array(
+//            'type'          => 'select',
+//            'class'         => array('my-field-class form-row-wide'),
+//            'label'         => __('Delivery Date'),
+//            'options'       => $this->getDeliveryDateOptions()
+//        ), $checkout->get_value( 'delivery_date' ));
 
 
         woocommerce_form_field( 'delivery_date', array(
-            'type'          => 'select',
-            'class'         => array('my-field-class form-row-wide'),
-            'label'         => __('Delivery Date'),
-            'options'       => $this->getDeliveryDateOptions()
+            'type'          => 'text',
+            'class'         => array('my-field-class form-row-first'),
+            'clear'         => true,
+            'label'         => __('Your delivery day is:'),
         ), $checkout->get_value( 'delivery_date' ));
 
+        echo '<p> Your delivery date: <input type="text" id="delivery_date" name="delivery_date" /> </p>';
 
         echo '</span>';
 
 
         echo '</div>';
 
+
+
+//        echo '<p> Date: <input type="text" id="pickup_time" name="pickup_time" /> </p>';
 
 
         echo '<script>
@@ -411,8 +536,6 @@ class BillyCart {
             }
         }
 
-
-
         return $options;
     }
 
@@ -441,7 +564,7 @@ class BillyCart {
         $zones = $this->getZoneIds($postcode);
         $suburb = $this->getZoneSuburbs($zones[0], $postcode);
         $day = $this->get_delivery_day($postcode);
-
+        //print_r($suburb);
 
         //todo: show chosen delivery type's date details.
 
@@ -451,6 +574,7 @@ class BillyCart {
         //echo "</p>";
     }
 
+    //kel: check if delivery is chosen
     function woocommerce_cart_needs_shipping_address($bool){
 
         $packages = WC()->shipping->get_packages();
@@ -1124,12 +1248,11 @@ class BillyCart {
     }
 
 
-
+// this is for cart not
 
     function billy_cart_zone_selector() {
 
         //Andrew
-
         if(isset($_REQUEST['billy_cart_zone_selector'])) return;
         $_REQUEST['billy_cart_zone_selector'] = 1;
 
@@ -1150,8 +1273,8 @@ class BillyCart {
 
         $count = count($zoneids);
         $session_zone = $this->get_current_billy_zone();
-        //print_r($zoneids);
-        //print_r($session_zone);
+//        print_r($zoneids);
+//        print_r($session_zone);
 
 
         echo '<style>.billy-radio input{display: none}</style>';
@@ -1167,6 +1290,8 @@ class BillyCart {
             foreach($zoneids as $i =>  $zone){
                 $title = get_the_title($zone);
                 $suburbs = $this->getZoneSuburbs($zone, $postcode);
+
+
 
                 foreach($suburbs as $key => $suburb) {
                     $active = "";
@@ -1255,7 +1380,7 @@ class BillyCart {
             <script type="text/javascript">
                 jQuery( document ).ready( function ( e ) {
                     jQuery(function() {
-                        jQuery( "#pickup_date" ).datepicker({ minDate: "+1D", maxDate: "+8D" });
+                        jQuery( "#pickup_date" ).datepicker({ dateFormat: "DD, dd/mm/yy", minDate: "+1D", maxDate: "+8D" });
                     });
                 });
             </script>
