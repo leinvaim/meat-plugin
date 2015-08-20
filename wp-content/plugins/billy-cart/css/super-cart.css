@@ -1,0 +1,57 @@
+#pickupButton {
+    background: #828BA0;
+    color: white;
+    font-weight: bold;
+    margin: 15px 25px;
+    width: 35%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    min-height: 68px;
+}
+.ui-datepicker-unselectable.ui-state-disabled span.ui-state-default {
+    color:#828BA0 !important;
+    opacity: 0.3;
+}
+
+
+.ui-datepicker td .ui-state-default  {
+    color: #2E56B3;
+}
+
+#deliveryButton {
+    background: #828BA0;
+    color: white;
+    font-weight: bold;
+    margin: 15px 25px;
+    width: 35%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    min-height: 68px;
+}
+
+#shippingButtonsContainer {
+    text-align: center;
+
+}
+
+
+.hvr-bounce-in {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}

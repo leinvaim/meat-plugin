@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7c60b07-457c-4a69-aba1-19ca123c153d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/billy-cart/css/super-cart.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/billy-cart.php" afterPath="$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/billy-cart.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/billy-cart/assets/js/super-cart.js" afterPath="$PROJECT_DIR$/wp-content/plugins/billy-cart/assets/js/super-cart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/woocommerce-pip-template/template-body.php" afterPath="$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/woocommerce-pip-template/template-body.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="meat-plugin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,31 +28,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="billy-cart.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="billy-cart.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/billy-cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="34.87669">
-              <caret line="1382" column="90" selection-start-line="1382" selection-start-column="90" selection-end-line="1382" selection-end-column="90" />
+            <state vertical-scroll-proportion="6.4313726">
+              <caret line="325" column="58" selection-start-line="325" selection-start-column="58" selection-end-line="325" selection-end-column="58" />
               <folding>
-                <marker date="1439825730000" expanded="true" signature="5682:5779" placeholder="SELECT * FRO..mab_postmeta..." />
-                <marker date="1439825730000" expanded="true" signature="6542:6607" placeholder="..." />
-                <marker date="1439825730000" expanded="true" signature="12514:12547" placeholder="..." />
-                <marker date="1439825730000" expanded="true" signature="12514:12549" placeholder="..." />
-                <marker date="1439825730000" expanded="true" signature="12656:12689" placeholder="..." />
-                <marker date="1439825730000" expanded="true" signature="12656:12690" placeholder="..." />
-                <marker date="1439825730000" expanded="true" signature="14448:14696" placeholder="..." />
-                <marker date="1439825730000" expanded="true" signature="14522:14674" placeholder="..." />
-                <marker date="1439825730000" expanded="true" signature="15761:17311" placeholder="..." />
-                <marker date="1439825730000" expanded="true" signature="15816:15954" placeholder="{...}" />
-                <marker date="1439825730000" expanded="true" signature="15816:16947" placeholder="{...}" />
-                <marker date="1439825730000" expanded="true" signature="16070:16437" placeholder="{...}" />
-                <marker date="1439825730000" expanded="true" signature="16443:16925" placeholder="{...}" />
-                <marker date="1439825730000" expanded="true" signature="17002:17288" placeholder="{...}" />
-                <marker date="1439825730000" expanded="true" signature="17184:17263" placeholder="{...}" />
-                <marker date="1439825730000" expanded="true" signature="30184:30456" placeholder="..." />
-                <marker date="1439825730000" expanded="true" signature="30639:30780" placeholder="..." />
-                <marker date="1439825730000" expanded="true" signature="31691:31836" placeholder="SELECT * FRO..mab_postmeta..." />
+                <marker date="1440032184000" expanded="true" signature="6599:6696" placeholder="SELECT * FRO..mab_postmeta..." />
+                <marker date="1440032184000" expanded="true" signature="7459:7524" placeholder="..." />
+                <marker date="1440032184000" expanded="true" signature="15027:15044" placeholder="..." />
+                <marker date="1440032184000" expanded="true" signature="15094:15302" placeholder="..." />
+                <marker date="1440032184000" expanded="true" signature="15180:15302" placeholder="..." />
+                <marker date="1440032184000" expanded="true" signature="15303:15429" placeholder="..." />
+                <marker date="1440032184000" expanded="true" signature="15494:15511" placeholder="..." />
+                <marker date="1440032184000" expanded="true" signature="15537:15561" placeholder="..." />
+                <marker date="1440032184000" expanded="true" signature="17249:17509" placeholder="..." />
+                <marker date="1440032184000" expanded="true" signature="17325:17483" placeholder="..." />
+                <marker date="1440032184000" expanded="true" signature="18544:20100" placeholder="..." />
+                <marker date="1440032184000" expanded="true" signature="18599:18737" placeholder="{...}" />
+                <marker date="1440032184000" expanded="true" signature="18599:19730" placeholder="{...}" />
+                <marker date="1440032184000" expanded="true" signature="18853:19220" placeholder="{...}" />
+                <marker date="1440032184000" expanded="true" signature="19226:19708" placeholder="{...}" />
+                <marker date="1440032184000" expanded="true" signature="19785:20077" placeholder="{...}" />
+                <marker date="1440032184000" expanded="true" signature="19861:20054" placeholder="//..." />
+                <marker date="1440032184000" expanded="true" signature="19969:20052" placeholder="{...}" />
+                <marker date="1440032184000" expanded="true" signature="32973:33245" placeholder="..." />
+                <marker date="1440032184000" expanded="true" signature="33428:33569" placeholder="..." />
+                <marker date="1440032184000" expanded="true" signature="34480:34625" placeholder="SELECT * FRO..mab_postmeta..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="billy-cart.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/billy-cart.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.6470587">
+              <caret line="17" column="16" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="order-details.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/order/order-details.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.862745">
+              <caret line="165" column="2" selection-start-line="165" selection-start-column="1" selection-end-line="165" selection-end-column="2" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,18 +83,18 @@
       <file leaf-file-name="super-cart.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/assets/js/super-cart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.148148">
-              <caret line="191" column="20" selection-start-line="191" selection-start-column="20" selection-end-line="191" selection-end-column="20" />
+            <state vertical-scroll-proportion="-10.0">
+              <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BillyCartShippingMethod.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/BillyCartShippingMethod.php">
+      <file leaf-file-name="super-cart.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/css/super-cart.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="126.708336">
-              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.30326593">
+              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -75,15 +102,24 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/woocommerce-pip-template/template-body.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/billy-cart/css/super-cart.css" />
         <option value="$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/BillyCartShippingMethod.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/billy-cart/assets/js/super-cart.js" />
         <option value="$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/billy-cart.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/billy-cart/assets/js/super-cart.js" />
       </list>
     </option>
   </component>
@@ -175,6 +211,106 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meat-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meat-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meatatbillys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meat-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meat-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meatatbillys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woocommerce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meat-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meat-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meatatbillys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woocommerce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="walkers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meat-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meat-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -197,97 +333,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="woocommerce" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meat-plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meat-plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="woocommerce" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meat-plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meat-plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="woocommerce" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meat-plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meat-plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="woocommerce" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="woocommerce-pip" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -361,6 +407,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meat-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meat-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="billy-cart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -402,6 +474,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -555,9 +628,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/billy-cart.php">
+    <entry file="file://$PROJECT_DIR$/wp-admin/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.453958">
+        <state vertical-scroll-proportion="-5.7189016">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-admin/admin-ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5024233">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/woocommerce-pip-template/email-template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.828756">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_5.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.0597738">
+          <caret line="1092" column="9" selection-start-line="1092" selection-start-column="9" selection-end-line="1092" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/woocommerce-pip-template/template-body.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.2941175">
+          <caret line="84" column="150" selection-start-line="84" selection-start-column="94" selection-end-line="84" selection-end-column="150" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/cart/_cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="69.833336">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/cart/_cart-totals.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="27.5">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/cart/shipping-calculator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="29.833334">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/library/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.18818">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/page-custom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.69628435">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/cart/cart-item-data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/cart/cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5864298">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/cart/cart-shipping.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -565,44 +742,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/BillyCartShippingMethod.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="126.708336">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3158784">
+          <caret line="327" column="0" selection-start-line="327" selection-start-column="0" selection-end-line="327" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/assets/js/super-cart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.148148">
-          <caret line="191" column="20" selection-start-line="191" selection-start-column="20" selection-end-line="191" selection-end-column="20" />
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/order/order-details.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.862745">
+          <caret line="165" column="2" selection-start-line="165" selection-start-column="1" selection-end-line="165" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/billy-cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6470587">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/billy-cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="34.87669">
-          <caret line="1382" column="90" selection-start-line="1382" selection-start-column="90" selection-end-line="1382" selection-end-column="90" />
+        <state vertical-scroll-proportion="6.4313726">
+          <caret line="325" column="58" selection-start-line="325" selection-start-column="58" selection-end-line="325" selection-end-column="58" />
           <folding>
-            <marker date="1439825730000" expanded="true" signature="5682:5779" placeholder="SELECT * FRO..mab_postmeta..." />
-            <marker date="1439825730000" expanded="true" signature="6542:6607" placeholder="..." />
-            <marker date="1439825730000" expanded="true" signature="12514:12547" placeholder="..." />
-            <marker date="1439825730000" expanded="true" signature="12514:12549" placeholder="..." />
-            <marker date="1439825730000" expanded="true" signature="12656:12689" placeholder="..." />
-            <marker date="1439825730000" expanded="true" signature="12656:12690" placeholder="..." />
-            <marker date="1439825730000" expanded="true" signature="14448:14696" placeholder="..." />
-            <marker date="1439825730000" expanded="true" signature="14522:14674" placeholder="..." />
-            <marker date="1439825730000" expanded="true" signature="15761:17311" placeholder="..." />
-            <marker date="1439825730000" expanded="true" signature="15816:15954" placeholder="{...}" />
-            <marker date="1439825730000" expanded="true" signature="15816:16947" placeholder="{...}" />
-            <marker date="1439825730000" expanded="true" signature="16070:16437" placeholder="{...}" />
-            <marker date="1439825730000" expanded="true" signature="16443:16925" placeholder="{...}" />
-            <marker date="1439825730000" expanded="true" signature="17002:17288" placeholder="{...}" />
-            <marker date="1439825730000" expanded="true" signature="17184:17263" placeholder="{...}" />
-            <marker date="1439825730000" expanded="true" signature="30184:30456" placeholder="..." />
-            <marker date="1439825730000" expanded="true" signature="30639:30780" placeholder="..." />
-            <marker date="1439825730000" expanded="true" signature="31691:31836" placeholder="SELECT * FRO..mab_postmeta..." />
+            <marker date="1440032184000" expanded="true" signature="6599:6696" placeholder="SELECT * FRO..mab_postmeta..." />
+            <marker date="1440032184000" expanded="true" signature="7459:7524" placeholder="..." />
+            <marker date="1440032184000" expanded="true" signature="15027:15044" placeholder="..." />
+            <marker date="1440032184000" expanded="true" signature="15094:15302" placeholder="..." />
+            <marker date="1440032184000" expanded="true" signature="15180:15302" placeholder="..." />
+            <marker date="1440032184000" expanded="true" signature="15303:15429" placeholder="..." />
+            <marker date="1440032184000" expanded="true" signature="15494:15511" placeholder="..." />
+            <marker date="1440032184000" expanded="true" signature="15537:15561" placeholder="..." />
+            <marker date="1440032184000" expanded="true" signature="17249:17509" placeholder="..." />
+            <marker date="1440032184000" expanded="true" signature="17325:17483" placeholder="..." />
+            <marker date="1440032184000" expanded="true" signature="18544:20100" placeholder="..." />
+            <marker date="1440032184000" expanded="true" signature="18599:18737" placeholder="{...}" />
+            <marker date="1440032184000" expanded="true" signature="18599:19730" placeholder="{...}" />
+            <marker date="1440032184000" expanded="true" signature="18853:19220" placeholder="{...}" />
+            <marker date="1440032184000" expanded="true" signature="19226:19708" placeholder="{...}" />
+            <marker date="1440032184000" expanded="true" signature="19785:20077" placeholder="{...}" />
+            <marker date="1440032184000" expanded="true" signature="19861:20054" placeholder="//..." />
+            <marker date="1440032184000" expanded="true" signature="19969:20052" placeholder="{...}" />
+            <marker date="1440032184000" expanded="true" signature="32973:33245" placeholder="..." />
+            <marker date="1440032184000" expanded="true" signature="33428:33569" placeholder="..." />
+            <marker date="1440032184000" expanded="true" signature="34480:34625" placeholder="SELECT * FRO..mab_postmeta..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/css/super-cart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30326593">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>

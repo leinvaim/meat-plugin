@@ -154,7 +154,6 @@ class BillyCart {
 
 
 
-
         // Custom checkout fields
         add_action( 'woocommerce_after_order_notes', array($this,'wordimpress_custom_checkout_field'), 10 );
         add_filter( 'woocommerce_form_field_multiselect', array($this, 'pickup_time_multiselect_handler'), 10, 4 );
@@ -165,7 +164,9 @@ class BillyCart {
 
         //added CUSTOM fields
         add_filter( 'woocommerce_checkout_fields' ,  array($this,'custom_override_checkout_fields'), 100);
-
+        add_action( 'woocommerce_admin_order_data_after_billing_address', array($this, 'my_custom_checkout_field_display_admin_order_meta'), 10, 1 );
+        add_action('woocommerce_order_details_after_order_table', array($this, 'shippingDetails'));
+        add_filter( 'woocommerce_available_shipping_methods', 'custom_shipping_methods' );
 
         add_filter( 'wp_footer' ,  array($this,'woo_add_checkout_field_date_range_limit' ));
 
@@ -175,6 +176,20 @@ class BillyCart {
 
     } // End __construct ()
 
+
+    function custom_shipping_methods( $available_methods ) {
+        print_r($available_methods);
+    }
+        // Displaying shipping method on order details page
+    function shippingDetails($order) {
+        echo '<h2>Shipping details</h2>';
+        echo get_post_meta( $order->id, 'shippingMethod', true );
+    }
+
+    // Displaying shipping method field on admin site
+    function my_custom_checkout_field_display_admin_order_meta($order){
+        echo '<p><strong>'.__('Shipping Method').':</strong> ' . get_post_meta( $order->id, 'shippingMethod', true ) . '</p>';
+    }
 
     function my_custom_js() {
 
@@ -219,20 +234,26 @@ class BillyCart {
         echo "<script>var deliveryZones = $json;</script>";
 
         echo '<script src="/wp-content/plugins/billy-cart/assets/js/super-cart.js"></script>';
+        echo '<link href="/wp-content/plugins/billy-cart/css/super-cart.css" rel="stylesheet" />';
+        echo '<style id="shipping_css"></style>';
+        //echo '<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />';
+        //echo '<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>';
+
+//        echo '<link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />';
+//        echo '<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>';
     }
 
 
     function custom_override_checkout_fields( $fields ) {
 
-
         //$fields['billing']['billing_city']['label'] = 'Your Label';
         $fields['billing']['billing_city']['type'] = 'select';
         $fields['billing']['billing_city']['options'] = array(
-            '' => 'Enter your postcode'
+            '' => ''
         );
         $fields['billing']['billing_city']['clear'] = true;
-        $fields['billing']['billing_city']['class'] = array('form-row-first', 'address_field', 'update_totals_on_change');
-        //$fields['billing']['billing_city']['placeholder'] = _x('Select Suburb', 'placeholder', 'woocommerce');
+        $fields['billing']['billing_city']['class'] = array('form-row-first');
+        $fields['billing']['billing_city']['placeholder'] = '- Select your suburb -';
 
      //print_r($fields['billing']['billing_city']);
 //      $fields['billing']['suburbs'] = array(
@@ -245,15 +266,39 @@ class BillyCart {
 //        //'position'  => 'right',
 //        'options'   => $suburbs
 //        );
+
+
+        $order = array(
+            "billing_country",
+            "billing_first_name",
+            "billing_last_name",
+            "billing_company",
+            "billing_address_1",
+            "billing_address_2",
+            "billing_state",
+            "billing_postcode",
+            "billing_city",
+            "billing_email",
+            "billing_phone",
+            "ss_wc_mailchimp_opt_in"
+
+        );
+        foreach($order as $field)
+        {
+            $ordered_fields[$field] = $fields["billing"][$field];
+        }
+
+        $fields["billing"] = $ordered_fields;
+
          return $fields;
     }
 
+
+    //validation!!!!!!!
     function billy_custom_checkout_field_process(){
 
         // Validate pickup date
         global $woocommerce;
-
-
 
         /*
         $a = in_array('local_pickup', $_POST['shipping_method']);
@@ -270,6 +315,9 @@ class BillyCart {
     }
 
 
+
+
+
     function pickup_field_update_order_meta( $order_id ) {
 
         //check if $_POST has our custom fields
@@ -278,12 +326,16 @@ class BillyCart {
         //$_REQUEST['pickup_field_update_order_meta'] = 1;
         // dispatch_details
 
-
+        print_r($_POST);
 
         //This prints out on order details after checkout
         if ( @$_POST['delivery_date'] ) {
             $str = "Delivery scheduled for ".esc_attr( $_POST['delivery_date'] );
             $_POST['dispatch_details'] = $str;
+            //new invoice field
+            update_post_meta( $order_id, 'shippingMethod', sanitize_text_field( $str ) );
+
+            // todo: remove these 2 lines, no longer used
             //for the field additional field in admin
             $updated = (update_post_meta( $order_id, '_dispatch_details', $str))?'true':'false'; //checkout field manager adds a _ to the front of the field name...
             hog(print_r(array('billycart', $order_id, "_dispatch_details ($updated): ".$str),true));
@@ -293,20 +345,26 @@ class BillyCart {
              //pickup time = morning or arvo,
             $str = "Pickup scheduled for:  ".esc_attr( $_POST['pickup_time'] )." on ".esc_attr( $_POST['pickup_date'] );
             $_POST['dispatch_details'] = $str;
+            //new invoice field
+            update_post_meta( $order_id, 'shippingMethod', sanitize_text_field( $str ) );
+
+            // todo: remove these 2 lines, no longer used
             $updated = (update_post_meta( $order_id, '_dispatch_details', $str))?'true':'false';
             hog(print_r(array('billycart', $order_id, "_dispatch_details ($updated): ".$str),true));
         }
 
-        if(@$_POST['craig']) {
-            update_post_meta($order_id, 'craig', esc_attr($_POST['craig']));
+//        if(@$_POST['craig']) {
+//            update_post_meta($order_id, 'craig', esc_attr($_POST['craig']));
+//
+//            $str = " Craig hahaha:  ".esc_attr( $_POST['craig'] )." on time";
+//            $_POST['dispatch_details'] .= $str;
+//            $updated = (update_post_meta( $order_id, '_dispatch_details', $str))?'true':'false';
+//            hog(print_r(array('billycart', $order_id, "_dispatch_details ($updated): ".$str),true));
+//        }
 
-            $str = " Craig hahaha:  ".esc_attr( $_POST['craig'] )." on time";
-            $_POST['dispatch_details'] .= $str;
-            $updated = (update_post_meta( $order_id, '_dispatch_details', $str))?'true':'false';
-            hog(print_r(array('billycart', $order_id, "_dispatch_details ($updated): ".$str),true));
-        }
-
-
+//        if ( ! empty( $_POST['craig'] ) ) {
+//            update_post_meta( $order_id, 'Craig says', sanitize_text_field( $_POST['craig'] ) );
+//        }
 
 
         if ( @$_POST['pickup_date'] ) {
@@ -365,10 +423,26 @@ class BillyCart {
 
         //Shipping method options / buttons
 
+        echo '<p style="padding-top:15px;"><h3>Shipping Options</h3></p>';
         echo '<p>';
-        echo '<button type="button" id="pickupButton" name="pickupButton" style="background: #330088; padding: 5em; "> Pick Up</button>';
-        echo '<button type="button" id="deliveryButton" name="deliveryButton" style="background: #330088; padding: 5em;" > Delivery</button>';
+
+        echo '
+               <div id="shippingButtonsContainer" class="form-row">
+
+                    <button type="button" id="pickupButton" name="pickupButton" class="hvr-bounce-in"> Pick Up</button>
+
+                    <button type="button" id="deliveryButton" name="deliveryButton" class="hvr-bounce-in"> Delivery</button>
+
+                </div>';
+
         echo '</p>';
+
+        echo '<p>
+                <div id="deliveryMessage">
+
+                </div>
+
+              </p>';
 
 
         echo "\n\n<!-- Zone: ".$this->get_current_billy_zone()." -->\n\n";
@@ -393,42 +467,46 @@ class BillyCart {
 
 
 
-        echo '<span class="pickup-time"><h3>Pickup Time</h3>';
+        echo '<span class="pickup-time">';
 
 
-//            woocommerce_form_field( 'pickup_date', array(
-//                'type'  => 'text',
-//                'id' => 'pickup_date',
-//                'class' => array( 'inscription-checkbox form-row-wide' ),
-//                'label' => __( 'Pickup date' ),
-//            ), $checkout->get_value( 'pickup_date' ) );
-
-        echo '<p> Pickup Date: <input type="text" id="pickup_date" name="pickup_date" /> </p>';
-
-//            woocommerce_form_field( 'pickup_time', array(
-//                'type'          => 'select',
-//                'class'         => array('my-field-class form-row-wide'),
-//                'label'         => __('Pickup time'),
-//                'options'       => array(
-//                    'Morning' => __('Morning', 'woocommerce' ),
-//                    'Afternoon' => __('Afternoon', 'woocommerce' )
-//                )
-//            ), $checkout->get_value( 'pickup_time' ));
+            woocommerce_form_field( 'pickup_date', array(
+                'type'  => 'text',
+                'id' => 'pickup_date',
+                'class' => array( 'inscription-checkbox form-row-first' ),
+                'label' => __( 'Pickup date' ),
+            ) );
 
 
-        echo '<p> Pickup Time:
-                <select id="pickup_time" name="pickup_time">
-                    <option value="Morning">Morning</option>
-                    <option value="Afternoon">Afternoon</option>
-                </select>
+        //echo '<p> Pickup Date: <input type="text" id="pickup_date" name="pickup_date" /> </p>';
 
-                </p>';
+        // pickup date doesnt appear as it doesnt have initial value.
+
+
+            woocommerce_form_field( 'pickup_time', array(
+                'type'          => 'select',
+                'class'         => array('my-field-class form-row-first'),
+                'label'         => __('Pickup time'),
+                'options'       => array(
+                    'Morning' => __('Morning', 'woocommerce' ),
+                    'Afternoon' => __('Afternoon', 'woocommerce' )
+                )
+            ));
+
+
+//        echo '<p> Pickup Time:
+//                <select id="pickup_time" name="pickup_time">
+//                    <option value="Morning">Morning</option>
+//                    <option value="Afternoon">Afternoon</option>
+//                </select>
+//
+//                </p>';
 
 
         echo '</span>';
 
         // DELIVERY DATE
-        echo '<span class="delivery-date"><h3>Delivery Date</h3>';
+        echo '<span class="delivery-date">';
 
 
 //        woocommerce_form_field( 'delivery_date', array(
@@ -446,7 +524,7 @@ class BillyCart {
             'label'         => __('Your delivery day is:'),
         ), $checkout->get_value( 'delivery_date' ));
 
-        echo '<p> Your delivery date: <input type="text" id="delivery_date" name="delivery_date" /> </p>';
+        //echo '<p> Your delivery day is: <input type="text" id="delivery_date" name="delivery_date" /> </p>';
 
         echo '</span>';
 
@@ -455,7 +533,7 @@ class BillyCart {
 
 
 
-//        echo '<p> Date: <input type="text" id="pickup_time" name="pickup_time" /> </p>';
+//       echo '<p> craig: <input type="text" id="craig" name="craig" /> </p>';
 
 
         echo '<script>
@@ -484,9 +562,9 @@ class BillyCart {
                         togglBillycartFields();
 
                         // Change events
-                        jQuery("body").on("change", "#shipping_method :radio", function(){
-                            togglBillycartFields();
-                        });
+//                        jQuery("body").on("change", "#shipping_method :radio", function(){
+//                            togglBillycartFields();
+//                        });
 
                     });
             </script>';
@@ -1378,11 +1456,11 @@ class BillyCart {
         if ( is_checkout() ) {
             ?>
             <script type="text/javascript">
-                jQuery( document ).ready( function ( e ) {
-                    jQuery(function() {
-                        jQuery( "#pickup_date" ).datepicker({ dateFormat: "DD, dd/mm/yy", minDate: "+1D", maxDate: "+8D" });
-                    });
-                });
+//                jQuery( document ).ready( function ( e ) {
+//                    jQuery(function() {
+//                        jQuery( "#pickup_date" ).datepicker({ dateFormat: "DD, dd/mm/yy", minDate: "+1D", maxDate: "+8D" });
+//                    });
+//                });
             </script>
         <?php
         }
