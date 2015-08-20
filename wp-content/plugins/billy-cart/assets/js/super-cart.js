@@ -29,6 +29,7 @@ jQuery(document).ready(function () {
         } else {
             jQuery('#shipping_css').text('#shipping_method li:nth-child(2) { display: none } ' +
                 '#shipping_method input { display: none }');
+
         }
 
 
@@ -102,12 +103,14 @@ jQuery(document).ready(function () {
         //jQuery("#shipping_method_0_billy_cart_shipping").hide();
 
         messageField.text('');
+        jQuery("#deliveryMessage").hide();
         updateCalendarPickupDays();
     }
 
     function updateShippingOptionsForDelivery() {
         jQuery("#shipping_method_0_billy_cart_shipping").click();
         jQuery("#pickup_date").val('');
+        jQuery("#deliveryMessage").show();
        // jQuery("#shipping_method_0_local_pickup").hide();
 
         var selectedSuburb = jQuery('#billing_city').val();
@@ -116,10 +119,11 @@ jQuery(document).ready(function () {
         cutOffTime = getCutOffTimeForDeliveryZone(deliveryZone);
 
         updateCalendarDeliveryDays();
-
-        messageToDisplay = 'Delivery to ' + selectedSuburb + ' occur on ' + deliveryDays +
-            '\n your next delivery day is on: ' + getDefaultDeliveryDate() + ' between ' +
-            getTime(deliveryZone.start_time) + ' and ' + getTime(deliveryZone.end_time) + '.';
+        //getDeliveryDayString(deliveryDays);
+        messageToDisplay = 'Delivery to ' + selectedSuburb + ' occur on ' + deliveryDays.join(', ') +
+            ' between ' +
+            getTime(deliveryZone.start_time) + ' and ' + getTime(deliveryZone.end_time) + '.' +
+            '\n The next delivery day is on: ' + getDefaultDeliveryDate() +  '.';
 
         messageField.text(messageToDisplay);
 
