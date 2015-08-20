@@ -81,6 +81,12 @@
 						</div>
 						<?php } ?>
 
+				<!-- Add shipping method- Cognitia August 2015 -->
+				<p><strong><?php _e('Shipping Method:', 'woocommerce-pip'); ?></strong> <?php echo get_post_meta( $order_id, 'shippingMethod', true ); ?></p>
+
+
+
+
 			</header>
 			<div class="datagrid">
 				<?php if ($action == 'print_invoice') { ?>
