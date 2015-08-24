@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7c60b07-457c-4a69-aba1-19ca123c153d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/billy-cart/css/super-cart.css" afterPath="$PROJECT_DIR$/wp-content/plugins/billy-cart/css/super-cart.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/billy-cart/assets/js/super-cart.js" afterPath="$PROJECT_DIR$/wp-content/plugins/billy-cart/assets/js/super-cart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/billy-cart.php" afterPath="$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/billy-cart.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="meat-plugin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,50 +28,80 @@
       <file leaf-file-name="billy-cart.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/billy-cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-34.117645">
-              <caret line="649" column="18" selection-start-line="649" selection-start-column="10" selection-end-line="649" selection-end-column="18" />
+            <state vertical-scroll-proportion="6.470588">
+              <caret line="179" column="4" selection-start-line="179" selection-start-column="4" selection-end-line="179" selection-end-column="4" />
               <folding>
-                <marker date="1440032184000" expanded="true" signature="6599:6696" placeholder="SELECT * FRO..mab_postmeta..." />
-                <marker date="1440032184000" expanded="true" signature="7459:7524" placeholder="..." />
-                <marker date="1440032184000" expanded="true" signature="15027:15044" placeholder="..." />
-                <marker date="1440032184000" expanded="true" signature="15094:15302" placeholder="..." />
-                <marker date="1440032184000" expanded="true" signature="15180:15302" placeholder="..." />
-                <marker date="1440032184000" expanded="true" signature="15303:15429" placeholder="..." />
-                <marker date="1440032184000" expanded="true" signature="15494:15511" placeholder="..." />
-                <marker date="1440032184000" expanded="true" signature="15537:15561" placeholder="..." />
-                <marker date="1440032184000" expanded="true" signature="17249:17509" placeholder="..." />
-                <marker date="1440032184000" expanded="true" signature="17325:17483" placeholder="..." />
-                <marker date="1440032184000" expanded="true" signature="18544:20100" placeholder="..." />
-                <marker date="1440032184000" expanded="true" signature="18599:18737" placeholder="{...}" />
-                <marker date="1440032184000" expanded="true" signature="18599:19730" placeholder="{...}" />
-                <marker date="1440032184000" expanded="true" signature="18853:19220" placeholder="{...}" />
-                <marker date="1440032184000" expanded="true" signature="19226:19708" placeholder="{...}" />
-                <marker date="1440032184000" expanded="true" signature="19785:20077" placeholder="{...}" />
-                <marker date="1440032184000" expanded="true" signature="19861:20054" placeholder="//..." />
-                <marker date="1440032184000" expanded="true" signature="19969:20052" placeholder="{...}" />
-                <marker date="1440032184000" expanded="true" signature="32973:33245" placeholder="..." />
-                <marker date="1440032184000" expanded="true" signature="33428:33569" placeholder="..." />
-                <marker date="1440032184000" expanded="true" signature="34480:34625" placeholder="SELECT * FRO..mab_postmeta..." />
+                <marker date="1440385054000" expanded="true" signature="6419:6516" placeholder="SELECT * FRO..mab_postmeta..." />
+                <marker date="1440385054000" expanded="true" signature="7249:7314" placeholder="..." />
+                <marker date="1440385054000" expanded="true" signature="13203:13220" placeholder="..." />
+                <marker date="1440385054000" expanded="true" signature="13270:13478" placeholder="..." />
+                <marker date="1440385054000" expanded="true" signature="13356:13478" placeholder="..." />
+                <marker date="1440385054000" expanded="true" signature="13479:13605" placeholder="..." />
+                <marker date="1440385054000" expanded="true" signature="13670:13687" placeholder="..." />
+                <marker date="1440385054000" expanded="true" signature="13713:13737" placeholder="..." />
+                <marker date="1440385054000" expanded="true" signature="15425:15685" placeholder="..." />
+                <marker date="1440385054000" expanded="true" signature="15501:15659" placeholder="..." />
+                <marker date="1440385054000" expanded="true" signature="16720:18276" placeholder="..." />
+                <marker date="1440385054000" expanded="true" signature="16775:16913" placeholder="{...}" />
+                <marker date="1440385054000" expanded="true" signature="16775:17906" placeholder="{...}" />
+                <marker date="1440385054000" expanded="true" signature="17029:17396" placeholder="{...}" />
+                <marker date="1440385054000" expanded="true" signature="17402:17884" placeholder="{...}" />
+                <marker date="1440385054000" expanded="true" signature="17961:18253" placeholder="{...}" />
+                <marker date="1440385054000" expanded="true" signature="18037:18230" placeholder="//..." />
+                <marker date="1440385054000" expanded="true" signature="18145:18228" placeholder="{...}" />
+                <marker date="1440385054000" expanded="true" signature="31111:31383" placeholder="..." />
+                <marker date="1440385054000" expanded="true" signature="31566:31707" placeholder="..." />
+                <marker date="1440385054000" expanded="true" signature="32618:32763" placeholder="SELECT * FRO..mab_postmeta..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template-body.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/woocommerce-pip-template/template-body.php">
+      <file leaf-file-name="wp-mail.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-mail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="35.458332">
-              <caret line="84" column="150" selection-start-line="84" selection-start-column="94" selection-end-line="84" selection-end-column="150" />
+            <state vertical-scroll-proportion="64.208336">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="super-cart.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="wp-config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="29.833334">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="email-template.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/woocommerce-pip-template/email-template.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.416667">
+              <caret line="159" column="45" selection-start-line="159" selection-start-column="45" selection-end-line="159" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template-body.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/woocommerce-pip-template/template-body.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5815832">
+              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="super-cart.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/assets/js/super-cart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.387987">
-              <caret line="125" column="19" selection-start-line="125" selection-start-column="19" selection-end-line="125" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="366" column="42" selection-start-line="366" selection-start-column="42" selection-end-line="366" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -104,9 +134,9 @@
       <list>
         <option value="$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/woocommerce-pip-template/template-body.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/BillyCartShippingMethod.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/billy-cart.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/billy-cart/css/super-cart.css" />
         <option value="$PROJECT_DIR$/wp-content/plugins/billy-cart/assets/js/super-cart.js" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/billy-cart.php" />
       </list>
     </option>
   </component>
@@ -122,9 +152,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
     <option name="y" value="23" />
-    <option name="width" value="1282" />
+    <option name="width" value="1280" />
     <option name="height" value="740" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -294,63 +323,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meatatbillys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="woocommerce" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="walkers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meat-plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meat-plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meat-plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meat-plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="woocommerce-pip" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -359,9 +332,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../moviesowl-server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../binary-search" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -382,6 +356,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
   </component>
@@ -399,27 +379,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="23" width="1282" height="740" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="740" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22620904" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22578125" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960998" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960998" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960998" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -438,6 +418,168 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/billy-cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="649" column="18" selection-start-line="649" selection-start-column="10" selection-end-line="649" selection-end-column="18" />
+          <folding>
+            <marker date="1440385054000" expanded="true" signature="6419:6516" placeholder="SELECT * FRO..mab_postmeta..." />
+            <marker date="1440385054000" expanded="true" signature="7249:7314" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13203:13220" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13270:13478" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13356:13478" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13479:13605" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13670:13687" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13713:13737" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="15425:15685" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="15501:15659" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="16720:18276" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="16775:16913" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="16775:17906" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="17029:17396" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="17402:17884" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="17961:18253" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="18037:18230" placeholder="//..." />
+            <marker date="1440385054000" expanded="true" signature="18145:18228" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="31111:31383" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="31566:31707" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="32618:32763" placeholder="SELECT * FRO..mab_postmeta..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/woocommerce-pip-template/template-body.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="150" selection-start-line="84" selection-start-column="94" selection-end-line="84" selection-end-column="150" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/assets/js/super-cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="366" column="42" selection-start-line="366" selection-start-column="42" selection-end-line="366" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/css/super-cart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/billy-cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="649" column="18" selection-start-line="649" selection-start-column="10" selection-end-line="649" selection-end-column="18" />
+          <folding>
+            <marker date="1440385054000" expanded="true" signature="6419:6516" placeholder="SELECT * FRO..mab_postmeta..." />
+            <marker date="1440385054000" expanded="true" signature="7249:7314" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13203:13220" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13270:13478" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13356:13478" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13479:13605" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13670:13687" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13713:13737" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="15425:15685" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="15501:15659" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="16720:18276" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="16775:16913" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="16775:17906" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="17029:17396" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="17402:17884" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="17961:18253" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="18037:18230" placeholder="//..." />
+            <marker date="1440385054000" expanded="true" signature="18145:18228" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="31111:31383" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="31566:31707" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="32618:32763" placeholder="SELECT * FRO..mab_postmeta..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/woocommerce-pip-template/template-body.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="150" selection-start-line="84" selection-start-column="94" selection-end-line="84" selection-end-column="150" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/assets/js/super-cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/css/super-cart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/billy-cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="649" column="18" selection-start-line="649" selection-start-column="10" selection-end-line="649" selection-end-column="18" />
+          <folding>
+            <marker date="1440385054000" expanded="true" signature="6419:6516" placeholder="SELECT * FRO..mab_postmeta..." />
+            <marker date="1440385054000" expanded="true" signature="7249:7314" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13203:13220" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13270:13478" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13356:13478" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13479:13605" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13670:13687" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13713:13737" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="15425:15685" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="15501:15659" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="16720:18276" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="16775:16913" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="16775:17906" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="17029:17396" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="17402:17884" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="17961:18253" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="18037:18230" placeholder="//..." />
+            <marker date="1440385054000" expanded="true" signature="18145:18228" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="31111:31383" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="31566:31707" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="32618:32763" placeholder="SELECT * FRO..mab_postmeta..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/woocommerce-pip-template/template-body.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="150" selection-start-line="84" selection-start-column="94" selection-end-line="84" selection-end-column="150" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/assets/js/super-cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/css/super-cart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/assets/template.csv">
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -445,7 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -453,7 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48465267">
           <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -461,7 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.2229402">
           <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -469,7 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3457189">
           <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -477,7 +615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="6.428571">
           <caret line="300" column="29" selection-start-line="300" selection-start-column="29" selection-end-line="300" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -485,9 +622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.017770598">
           <caret line="822" column="1" selection-start-line="822" selection-start-column="1" selection-end-line="822" selection-end-column="1" />
-          <folding>
-            <marker date="1438934301000" expanded="true" signature="-1:-1" placeholder="SELECT optio..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -495,7 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.5024233">
           <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -503,7 +636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.707593">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -511,7 +643,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.04976672">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -519,7 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.7189016">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -527,15 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.5024233">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/woocommerce-pip-template/email-template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.828756">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -543,7 +664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.0597738">
           <caret line="1092" column="9" selection-start-line="1092" selection-start-column="9" selection-end-line="1092" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -551,7 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="69.833336">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -559,7 +678,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="27.5">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -567,7 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="29.833334">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -575,7 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-23.18818">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -583,7 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -591,7 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.69628435">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -599,7 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -607,7 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.5864298">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -615,7 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -623,7 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3158784">
           <caret line="327" column="0" selection-start-line="327" selection-start-column="0" selection-end-line="327" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -639,7 +749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.44425675">
           <caret line="17" column="16" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -647,52 +756,107 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33277026">
           <caret line="165" column="2" selection-start-line="165" selection-start-column="1" selection-end-line="165" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/billy-cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-34.117645">
-          <caret line="649" column="18" selection-start-line="649" selection-start-column="10" selection-end-line="649" selection-end-column="18" />
-          <folding>
-            <marker date="1440032184000" expanded="true" signature="6599:6696" placeholder="SELECT * FRO..mab_postmeta..." />
-            <marker date="1440032184000" expanded="true" signature="7459:7524" placeholder="..." />
-            <marker date="1440032184000" expanded="true" signature="15027:15044" placeholder="..." />
-            <marker date="1440032184000" expanded="true" signature="15094:15302" placeholder="..." />
-            <marker date="1440032184000" expanded="true" signature="15180:15302" placeholder="..." />
-            <marker date="1440032184000" expanded="true" signature="15303:15429" placeholder="..." />
-            <marker date="1440032184000" expanded="true" signature="15494:15511" placeholder="..." />
-            <marker date="1440032184000" expanded="true" signature="15537:15561" placeholder="..." />
-            <marker date="1440032184000" expanded="true" signature="17249:17509" placeholder="..." />
-            <marker date="1440032184000" expanded="true" signature="17325:17483" placeholder="..." />
-            <marker date="1440032184000" expanded="true" signature="18544:20100" placeholder="..." />
-            <marker date="1440032184000" expanded="true" signature="18599:18737" placeholder="{...}" />
-            <marker date="1440032184000" expanded="true" signature="18599:19730" placeholder="{...}" />
-            <marker date="1440032184000" expanded="true" signature="18853:19220" placeholder="{...}" />
-            <marker date="1440032184000" expanded="true" signature="19226:19708" placeholder="{...}" />
-            <marker date="1440032184000" expanded="true" signature="19785:20077" placeholder="{...}" />
-            <marker date="1440032184000" expanded="true" signature="19861:20054" placeholder="//..." />
-            <marker date="1440032184000" expanded="true" signature="19969:20052" placeholder="{...}" />
-            <marker date="1440032184000" expanded="true" signature="32973:33245" placeholder="..." />
-            <marker date="1440032184000" expanded="true" signature="33428:33569" placeholder="..." />
-            <marker date="1440032184000" expanded="true" signature="34480:34625" placeholder="SELECT * FRO..mab_postmeta..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/woocommerce-pip-template/template-body.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="35.458332">
-          <caret line="84" column="150" selection-start-line="84" selection-start-column="94" selection-end-line="84" selection-end-column="150" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/assets/js/super-cart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.387987">
-          <caret line="125" column="19" selection-start-line="125" selection-start-column="19" selection-end-line="125" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="366" column="42" selection-start-line="366" selection-start-column="42" selection-end-line="366" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/woocommerce-pip-template/template-header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/woocommerce-pip-template/template-footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3457189">
+          <caret line="1501" column="20" selection-start-line="1501" selection-start-column="20" selection-end-line="1501" selection-end-column="20" />
+          <folding>
+            <marker date="1439161597000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1439161597000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1439161597000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1439161597000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1439161597000" expanded="true" signature="-1:-1" placeholder="SELECT order..." />
+            <marker date="1439161597000" expanded="true" signature="-1:-1" placeholder="SELECT meta_..." />
+            <marker date="1439161597000" expanded="true" signature="-1:-1" placeholder="SELECT downl..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/billy-cart/includes/billy-cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.470588">
+          <caret line="179" column="4" selection-start-line="179" selection-start-column="4" selection-end-line="179" selection-end-column="4" />
+          <folding>
+            <marker date="1440385054000" expanded="true" signature="6419:6516" placeholder="SELECT * FRO..mab_postmeta..." />
+            <marker date="1440385054000" expanded="true" signature="7249:7314" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13203:13220" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13270:13478" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13356:13478" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13479:13605" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13670:13687" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="13713:13737" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="15425:15685" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="15501:15659" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="16720:18276" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="16775:16913" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="16775:17906" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="17029:17396" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="17402:17884" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="17961:18253" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="18037:18230" placeholder="//..." />
+            <marker date="1440385054000" expanded="true" signature="18145:18228" placeholder="{...}" />
+            <marker date="1440385054000" expanded="true" signature="31111:31383" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="31566:31707" placeholder="..." />
+            <marker date="1440385054000" expanded="true" signature="32618:32763" placeholder="SELECT * FRO..mab_postmeta..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="64.208336">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="29.833334">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/woocommerce-pip-template/email-template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.416667">
+          <caret line="159" column="45" selection-start-line="159" selection-start-column="45" selection-end-line="159" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/meatatbillys/woocommerce/woocommerce-pip-template/template-body.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5815832">
+          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding />
         </state>
       </provider>

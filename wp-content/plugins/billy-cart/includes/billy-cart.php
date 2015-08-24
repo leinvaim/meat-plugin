@@ -162,14 +162,13 @@ class BillyCart {
         add_action('woocommerce_cart_totals_after_shipping', array($this, 'woocommerce_cart_totals_after_shipping'));
 
 
-        //added CUSTOM fields
+        add_filter( 'wp_footer' ,  array($this,'woo_add_checkout_field_date_range_limit' ));
+
+
+        //added CUSTOM fields Cognitia*********
         add_filter( 'woocommerce_checkout_fields' ,  array($this,'custom_override_checkout_fields'), 100);
         add_action( 'woocommerce_admin_order_data_after_billing_address', array($this, 'my_custom_checkout_field_display_admin_order_meta'), 10, 1 );
         add_action('woocommerce_order_details_after_order_table', array($this, 'shippingDetails'));
-        add_filter( 'woocommerce_available_shipping_methods', 'custom_shipping_methods' );
-
-        add_filter( 'wp_footer' ,  array($this,'woo_add_checkout_field_date_range_limit' ));
-
 
         add_action('wp_head', array($this, 'my_custom_js'));
 
@@ -177,10 +176,8 @@ class BillyCart {
     } // End __construct ()
 
 
-    function custom_shipping_methods( $available_methods ) {
-        print_r($available_methods);
-    }
-        // Displaying shipping method on order details page
+
+    // Displaying shipping method on order details page
     function shippingDetails($order) {
         echo '<h2>Shipping details</h2>';
         echo get_post_meta( $order->id, 'shippingMethod', true );
@@ -218,7 +215,6 @@ class BillyCart {
             $results = array_unique($results);
 
         }
-//        print_r($results) ;
 
         $bleh = [];
         $suburbs = [];
@@ -236,17 +232,12 @@ class BillyCart {
         echo '<script src="/wp-content/plugins/billy-cart/assets/js/super-cart.js"></script>';
         echo '<link href="/wp-content/plugins/billy-cart/css/super-cart.css" rel="stylesheet" />';
         echo '<style id="shipping_css"></style>';
-        //echo '<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />';
-        //echo '<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>';
-
-//        echo '<link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />';
-//        echo '<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>';
     }
 
 
     function custom_override_checkout_fields( $fields ) {
 
-        //$fields['billing']['billing_city']['label'] = 'Your Label';
+
         $fields['billing']['billing_city']['type'] = 'select';
         $fields['billing']['billing_city']['options'] = array(
             '' => ''
@@ -254,18 +245,6 @@ class BillyCart {
         $fields['billing']['billing_city']['clear'] = true;
         $fields['billing']['billing_city']['class'] = array('form-row-first');
         $fields['billing']['billing_city']['placeholder'] = '- Select your suburb -';
-
-     //print_r($fields['billing']['billing_city']);
-//      $fields['billing']['suburbs'] = array(
-//        'type'      => 'select',
-//        'label'     => __('Suburb', 'woocommerce'),
-//        'placeholder'   => _x('Select Suburb', 'placeholder', 'woocommerce'),
-//        'required'  => false,
-//        'class'     => array('form-row-first', 'address_field'),
-//        'clear'     => true,
-//        //'position'  => 'right',
-//        'options'   => $suburbs
-//        );
 
 
         $order = array(
@@ -353,18 +332,6 @@ class BillyCart {
             hog(print_r(array('billycart', $order_id, "_dispatch_details ($updated): ".$str),true));
         }
 
-//        if(@$_POST['craig']) {
-//            update_post_meta($order_id, 'craig', esc_attr($_POST['craig']));
-//
-//            $str = " Craig hahaha:  ".esc_attr( $_POST['craig'] )." on time";
-//            $_POST['dispatch_details'] .= $str;
-//            $updated = (update_post_meta( $order_id, '_dispatch_details', $str))?'true':'false';
-//            hog(print_r(array('billycart', $order_id, "_dispatch_details ($updated): ".$str),true));
-//        }
-
-//        if ( ! empty( $_POST['craig'] ) ) {
-//            update_post_meta( $order_id, 'Craig says', sanitize_text_field( $_POST['craig'] ) );
-//        }
 
 
         if ( @$_POST['pickup_date'] ) {
@@ -652,7 +619,7 @@ class BillyCart {
         //echo "</p>";
     }
 
-    //kel: check if delivery is chosen
+
     function woocommerce_cart_needs_shipping_address($bool){
 
         $packages = WC()->shipping->get_packages();
